@@ -11,6 +11,9 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
 
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
 
@@ -20,7 +23,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top" style="background-color: #023047">
       <div class="container">
-        <a class="navbar-brand" href="#">Syamsul Ma'arif</a>
+        <a class="navbar-brand" href="#">My Portfolio</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -45,9 +48,9 @@
     <!-- Akhir Navbar -->
     <!-- Jumbotron -->
     <section class="jumbotron text-center">
-      <img src="img/syamsul.jpg" alt="syamsul" width="200" class="rounded-circle img-thumbnail" />
+      <img src="img/syamsul.jpg" alt="syamsul" width="200" class="profil rounded-circle img-thumbnail" />
       <h1 class="display-4">Syamsul Ma'arif</h1>
-      <p class="lead">Student | Technology Enthusiast</p>
+      <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -66,13 +69,13 @@
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000">
             <p>
               Hi, my name is Syamsul Ma'arif. People used to call me syamsul. I was born in my beloved city, Purbalingga, on May 10,2004. I was born in a normal family like any other family, i'm the eldest of three children, all of whom are
               boys. As the eldest child, i'm required to be an example for my younger siblings. This motivates me to continue to study hard as much knowledge as possible so that i can raise the degree and dignity of my beloved family.
             </p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
             <p>
               I've an interest in technology. Starting from my hobby of playing games from the PSP, PS 2, to the current mobile game. Knowing how the game is made in such a way that it can be played, is a joy in itself for me. I started to
               find out about technological development such as Mobile Phone, Computers, and also basic programming languages such as Python, C++, Javascript, CSS, which i believe that all the knowledge i learn will be useful for my future.
@@ -99,7 +102,7 @@
         </div>
         <div class="row justify-content-evenly">
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500">
               <img src="img/projects/1.jpg" class="card-img-top" alt="projects 1" />
               <div class="card-body">
                 <p class="card-text">Learn some basic programming languages and try to practice them.</p>
@@ -107,7 +110,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="100">
               <img src="img/projects/4.jpg" class="card-img-top" alt="projects 4" />
               <div class="card-body">
                 <p class="card-text">Listen to music to restore the mood and accompany me during activities. If you want to listen to my playlist too, the name is "Eazylisten".</p>
@@ -115,7 +118,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="200">
               <img src="img/projects/3.jpg" class="card-img-top" alt="projects 3" />
               <div class="card-body">
                 <p class="card-text">Playing online games with my friends to fill my free time and relieve my boredom.</p>
@@ -123,7 +126,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="300">
               <img src="img/projects/2.jpg" class="card-img-top" alt="projects 2" />
               <div class="card-body">
                 <p class="card-text">Capturing a moment on camera is also a pleasure for me. Can be in the form of photos of videos. Sometimes i also dream, i want to make my own cinematography video.</p>
@@ -131,7 +134,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="400">
               <img src="img/projects/5.jpg" class="card-img-top" alt="projects 5" />
               <div class="card-body">
                 <p class="card-text">Mechanical keyboard is one of the items that i currently want to have. By saving money, i'm sure can buy it.</p>
@@ -202,6 +205,23 @@
     <!-- Akhir Footer -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        //once: true,
+      });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to('.lead', { duration: 2, delay: 1.5, text: 'Student | Technology Enthusiast' });
+      gsap.from('.navbar', { duration: 1.5, y: '-100%', opacity: 0, ease: 'bounce' });
+      gsap.from('.profil', { duration: 1, y: '-100%', opacity: 0, ease: 'expo' });
+      gsap.from('.display-4', { duration: 1, x: -50, opacity: 0, delay: 0.5, ease: 'back' });
+    </script>
 
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycby2j_NNcRbFdnE000T0flo2c2QcPPkmsaky79CrgwyRGYZbgPM39_uNvvx7G49GJZULQQ/exec';
